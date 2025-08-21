@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkLogin() {
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            // Name + surname check
+            if (!username.includes(" ")) {
+                alert("Please enter your name and surname.");
+                return;
+            }
+
+            // Password length check
+            if (password.length < 6 || password.length > 20) {
+                alert("Password must be between 6 and 20 characters.");
+                return;
+            }
+
+            // Password not equal to 'password'
+            if (password.toLowerCase() === "password") {
+                alert("Password cannot be 'password'.");
+                return;
+            }
+
+            // If valid → show homepage
+            document.getElementById("loginPage").style.display = "none";
+            document.getElementById("homePage").style.display = "block";
+            document.title = "Freshmart Home"; // Change page title after login
+        }
+    </script>
+</head>
+<body>
+    <!-- LOGIN PAGE -->
+    <div id="loginPage">
+        <header>
+            <h1>Login</h1>
+        </header>
+        <main>
+            <input type="text" id="username" placeholder="Name and Surname"><br>
+            <input type="password" id="password" placeholder="Password"><br>
+            <button onclick="checkLogin()">Login</button>
+        </main>
+    </div>
+
+    <!-- HOME PAGE -->
+    <div id="homePage" style="display:none">
+        <header>
+            <h1>FRESHMART LOGO</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="order.html">Order</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Welcome to Freshmart - Your Trusted Store</h2>
+            <p>Check out our products!</p>
+
+            <!-- Images -->
+            <img src="images/cabbage.jpg.jpg" alt="Cabbage">
+            <img src="images/carrots.jpg.jpg" alt="Carrots">
+            <img src="images/mango.jpg.png" alt="Mango">
+            <img src="images/potatoes.jpg.jpg"Potatoes">
+            <img src="images/spinash.jpg.jpg" alt="Spinach">
+            <img src="images/juice.jpg.jpg"Juice">
+            <img src="images/mango.jpg.jpg" alt="Milk">
+            <img src="images/water.jpg.jpg" alt="Water">
+        </main>
+
+        <footer>
+            &copy; 2025 Freshmart | Social media icons
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freshmart Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FRESHMART LOGO</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateFeedback()">
+            <input type="text" id="name" placeholder="Full Name" required><br>
+            <input type="email" id="email" placeholder="Email Address" required><br>
+            <input type="text" id="subject" placeholder="Subject"><br>
+            <textarea id="message" placeholder="Your Message" required></textarea><br>
+
+            <h3>Preferred Contact Method:</h3>
+            <input type="radio" name="contactMethod" value="Email" checked> Email
+            <input type="radio" name="contactMethod" value="Phone"> Phone<br>
+
+            <input type="checkbox" id="newsletter"> Subscribe to our newsletter<br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2025 Freshmart
+    </footer>
+
+    <script>
+        function validateFeedback() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all required fields!");
+                return false;
+            }
+            alert("Thank you for contacting us, " + name + "! We will reply soon.");
+            return true;
+        }
+    </script>
+</body>
+</html>

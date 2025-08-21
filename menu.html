@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freshmart Home</title>
+    <style>
+        /* Reset & Body */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #fff8f0; color: #333; }
+
+        /* Header & Navigation */
+        header {
+            background-color: #e53935;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        nav a:first-child { margin-left: 0; }
+        nav a:hover {
+            background-color: #ffebee;
+            color: #e53935;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Main Section */
+        main { padding: 20px; max-width: 1200px; margin: auto; text-align: center; }
+        main h2 { margin-bottom: 10px; }
+        main p { margin-bottom: 20px; font-size: 18px; }
+
+        /* Product Images */
+        main img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        main img:hover { transform: scale(1.05); }
+
+        /* Footer */
+        footer {
+            background-color: #b71c1c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header { flex-direction: column; align-items: flex-start; }
+            nav { width: 100%; margin-top: 10px; }
+            nav a { display: block; margin: 5px 0; }
+            main img { width: 45%; margin: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>FRESHMART LOGO</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Welcome to Freshmart - Your Trusted Store</h2>
+    <p>We provide fresh fruits, vegetables, and drinks daily.</p>
+
+    <!-- Product Images -->
+    <img src="images/cabbage.jpg" alt="Cabbage">
+    <img src="images/carrots.jpg" alt="Carrots">
+    <img src="images/mango.jpg" alt="Mango">
+    <img src="images/potatoes.jpg" alt="Potatoes">
+    <img src="images/spinach.jpg" alt="Spinach">
+    <img src="images/juice.jpg" alt="Juice">
+    <img src="images/milk.jpg" alt="Milk">
+    <img src="images/water.jpg" alt="Water">
+</main>
+
+<footer>
+    &copy; 2025 Freshmart | Follow us on Facebook, Instagram, Twitter
+</footer>
+
+</body>
+</html>

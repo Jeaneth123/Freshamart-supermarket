@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freshmart Order</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>FRESHMART LOGO</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Place Your Order</h2>
+        <form id="orderForm" onsubmit="return calculateTotal()">
+            <input type="text" id="customerName" placeholder="Full Name" required><br>
+            <input type="email" id="customerEmail" placeholder="Email Address" required><br>
+            <input type="text" id="customerPhone" placeholder="Phone Number" required><br>
+
+            <label for="product">Choose a Product:</label>
+            <select id="product">
+                <option value="carrot">Carrot - R5</option>
+                <option value="cabbage">Cabbage - R7</option>
+                <option value="spinach">Spinach - R6</option>
+                <option value="mango">Mango - R10</option>
+                <option value="potatoes">Potatoes - R8</option>
+                <option value="milk">Milk - R12</option>
+                <option value="juice">Juice - R15</option>
+                <option value="water">Water - R5</option>
+            </select><br>
+
+            <input type="number" id="quantity" min="1" value="1"><br>
+
+            <h3>Delivery Method:</h3>
+            <input type="radio" name="delivery" value="Delivery" checked> Delivery
+            <input type="radio" name="delivery" value="Pick-up"> Pick-up<br>
+
+            <h3>Payment Method:</h3>
+            <input type="radio" name="payment" value="Cash" checked> Cash
+            <input type="radio" name="payment" value="Card"> Card<br>
+
+            <input type="checkbox" id="acceptTerms"> I accept the terms & conditions<br><br>
+
+            <button type="submit">Submit Order</button>
+        </form>
+
+        <h3 id="orderResult"></h3>
+    </main>
+
+    <footer>
+        &copy; 2025 Freshmart
+    </footer>
+</body>
+</html>
